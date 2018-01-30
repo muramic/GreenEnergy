@@ -1,0 +1,91 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 22/06/2016 15:04
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-battery-charging-with-solar-panel:before { content: "\f100"; }
+.flaticon-bio-mass-eco-energy:before { content: "\f101"; }
+.flaticon-bio-mass-recycle-symbol:before { content: "\f102"; }
+.flaticon-bio-mass-renewable-energy:before { content: "\f103"; }
+.flaticon-co2-cloud:before { content: "\f104"; }
+.flaticon-cow-waste-to-bio-mass:before { content: "\f105"; }
+.flaticon-crossflow-turbine:before { content: "\f106"; }
+.flaticon-cycle-of-bio-mass:before { content: "\f107"; }
+.flaticon-cycle-sketch-of-bio-mass-into-energy:before { content: "\f108"; }
+.flaticon-earth-connected:before { content: "\f109"; }
+.flaticon-earth-outline:before { content: "\f10a"; }
+.flaticon-earth-planet:before { content: "\f10b"; }
+.flaticon-earth-spectrum:before { content: "\f10c"; }
+.flaticon-eco-friendly-home:before { content: "\f10d"; }
+.flaticon-eco-solar-panel-in-sunlight:before { content: "\f10e"; }
+.flaticon-eco-solar-panel-under-bright-sun:before { content: "\f10f"; }
+.flaticon-ecological-solar-panel-tool:before { content: "\f110"; }
+.flaticon-ecological-solar-panels-couple-in-sunlight:before { content: "\f111"; }
+.flaticon-energy-source:before { content: "\f112"; }
+.flaticon-energy-source-1:before { content: "\f113"; }
+.flaticon-energy-source-2:before { content: "\f114"; }
+.flaticon-energy-source-symbol:before { content: "\f115"; }
+.flaticon-energy-source-symbol-1:before { content: "\f116"; }
+.flaticon-energy-source-symbol-2:before { content: "\f117"; }
+.flaticon-energy-source-symbol-3:before { content: "\f118"; }
+.flaticon-energy-source-symbol-variant:before { content: "\f119"; }
+.flaticon-energy-sources:before { content: "\f11a"; }
+.flaticon-fixed-pitch-propeller-turbine:before { content: "\f11b"; }
+.flaticon-forest-waste-to-bio-mass:before { content: "\f11c"; }
+.flaticon-francis-turbine:before { content: "\f11d"; }
+.flaticon-house-with-solar-panel-installed:before { content: "\f11e"; }
+.flaticon-hydro-power-plant:before { content: "\f11f"; }
+.flaticon-hydro-power-plant-under-production:before { content: "\f120"; }
+.flaticon-hydro-power-with-power-lines:before { content: "\f121"; }
+.flaticon-hydro-power-with-turbine:before { content: "\f122"; }
+.flaticon-industrial-waste-to-bio-mass:before { content: "\f123"; }
+.flaticon-insulator-tool-outline:before { content: "\f124"; }
+.flaticon-kaplan-turbine:before { content: "\f125"; }
+.flaticon-light-connected-to-battery-and-solar-panel:before { content: "\f126"; }
+.flaticon-mobile-and-laptop-charging-with-solar-panel:before { content: "\f127"; }
+.flaticon-natural-energy-source:before { content: "\f128"; }
+.flaticon-pelton-turbine-wheel:before { content: "\f129"; }
+.flaticon-power-housing-with-power-lines:before { content: "\f12a"; }
+.flaticon-power-line-connected-towers:before { content: "\f12b"; }
+.flaticon-power-line-with-four-insulators:before { content: "\f12c"; }
+.flaticon-power-line-with-six-insulators:before { content: "\f12d"; }
+.flaticon-power-line-with-three-insulators:before { content: "\f12e"; }
+.flaticon-sewage-to-bio-mass:before { content: "\f12f"; }
+.flaticon-solar-panel-in-sunlight:before { content: "\f130"; }
+.flaticon-solar-panel-in-sunlight-1:before { content: "\f131"; }
+.flaticon-solar-panels-couple-in-sunlight:before { content: "\f132"; }
+.flaticon-solar-powered-house-building-with-solar-panels-on-the-roof:before { content: "\f133"; }
+.flaticon-sources-of-bio-mass:before { content: "\f134"; }
+.flaticon-sources-of-eco-bio-mass:before { content: "\f135"; }
+.flaticon-straight-view-of-solar-panel:before { content: "\f136"; }
+.flaticon-sun-energy-natural-source:before { content: "\f137"; }
+.flaticon-sun-radiation-symbol:before { content: "\f138"; }
+.flaticon-transmission-line-with-three-insulators:before { content: "\f139"; }
+.flaticon-turgo-turbine:before { content: "\f13a"; }
+.flaticon-wheat-waste-to-bio-mass:before { content: "\f13b"; }

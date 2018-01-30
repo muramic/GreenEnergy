@@ -1,0 +1,159 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 22/06/2016 15:04
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-battery-charging-with-solar-panel:before { content: "\f100"; }
+.flaticon-bio-mass-eco-energy:before { content: "\f101"; }
+.flaticon-bio-mass-recycle-symbol:before { content: "\f102"; }
+.flaticon-bio-mass-renewable-energy:before { content: "\f103"; }
+.flaticon-co2-cloud:before { content: "\f104"; }
+.flaticon-cow-waste-to-bio-mass:before { content: "\f105"; }
+.flaticon-crossflow-turbine:before { content: "\f106"; }
+.flaticon-cycle-of-bio-mass:before { content: "\f107"; }
+.flaticon-cycle-sketch-of-bio-mass-into-energy:before { content: "\f108"; }
+.flaticon-earth-connected:before { content: "\f109"; }
+.flaticon-earth-outline:before { content: "\f10a"; }
+.flaticon-earth-planet:before { content: "\f10b"; }
+.flaticon-earth-spectrum:before { content: "\f10c"; }
+.flaticon-eco-friendly-home:before { content: "\f10d"; }
+.flaticon-eco-solar-panel-in-sunlight:before { content: "\f10e"; }
+.flaticon-eco-solar-panel-under-bright-sun:before { content: "\f10f"; }
+.flaticon-ecological-solar-panel-tool:before { content: "\f110"; }
+.flaticon-ecological-solar-panels-couple-in-sunlight:before { content: "\f111"; }
+.flaticon-energy-source:before { content: "\f112"; }
+.flaticon-energy-source-1:before { content: "\f113"; }
+.flaticon-energy-source-2:before { content: "\f114"; }
+.flaticon-energy-source-symbol:before { content: "\f115"; }
+.flaticon-energy-source-symbol-1:before { content: "\f116"; }
+.flaticon-energy-source-symbol-2:before { content: "\f117"; }
+.flaticon-energy-source-symbol-3:before { content: "\f118"; }
+.flaticon-energy-source-symbol-variant:before { content: "\f119"; }
+.flaticon-energy-sources:before { content: "\f11a"; }
+.flaticon-fixed-pitch-propeller-turbine:before { content: "\f11b"; }
+.flaticon-forest-waste-to-bio-mass:before { content: "\f11c"; }
+.flaticon-francis-turbine:before { content: "\f11d"; }
+.flaticon-house-with-solar-panel-installed:before { content: "\f11e"; }
+.flaticon-hydro-power-plant:before { content: "\f11f"; }
+.flaticon-hydro-power-plant-under-production:before { content: "\f120"; }
+.flaticon-hydro-power-with-power-lines:before { content: "\f121"; }
+.flaticon-hydro-power-with-turbine:before { content: "\f122"; }
+.flaticon-industrial-waste-to-bio-mass:before { content: "\f123"; }
+.flaticon-insulator-tool-outline:before { content: "\f124"; }
+.flaticon-kaplan-turbine:before { content: "\f125"; }
+.flaticon-light-connected-to-battery-and-solar-panel:before { content: "\f126"; }
+.flaticon-mobile-and-laptop-charging-with-solar-panel:before { content: "\f127"; }
+.flaticon-natural-energy-source:before { content: "\f128"; }
+.flaticon-pelton-turbine-wheel:before { content: "\f129"; }
+.flaticon-power-housing-with-power-lines:before { content: "\f12a"; }
+.flaticon-power-line-connected-towers:before { content: "\f12b"; }
+.flaticon-power-line-with-four-insulators:before { content: "\f12c"; }
+.flaticon-power-line-with-six-insulators:before { content: "\f12d"; }
+.flaticon-power-line-with-three-insulators:before { content: "\f12e"; }
+.flaticon-sewage-to-bio-mass:before { content: "\f12f"; }
+.flaticon-solar-panel-in-sunlight:before { content: "\f130"; }
+.flaticon-solar-panel-in-sunlight-1:before { content: "\f131"; }
+.flaticon-solar-panels-couple-in-sunlight:before { content: "\f132"; }
+.flaticon-solar-powered-house-building-with-solar-panels-on-the-roof:before { content: "\f133"; }
+.flaticon-sources-of-bio-mass:before { content: "\f134"; }
+.flaticon-sources-of-eco-bio-mass:before { content: "\f135"; }
+.flaticon-straight-view-of-solar-panel:before { content: "\f136"; }
+.flaticon-sun-energy-natural-source:before { content: "\f137"; }
+.flaticon-sun-radiation-symbol:before { content: "\f138"; }
+.flaticon-transmission-line-with-three-insulators:before { content: "\f139"; }
+.flaticon-turgo-turbine:before { content: "\f13a"; }
+.flaticon-wheat-waste-to-bio-mass:before { content: "\f13b"; }
+    
+    $font-Flaticon-battery-charging-with-solar-panel: "\f100";
+    $font-Flaticon-bio-mass-eco-energy: "\f101";
+    $font-Flaticon-bio-mass-recycle-symbol: "\f102";
+    $font-Flaticon-bio-mass-renewable-energy: "\f103";
+    $font-Flaticon-co2-cloud: "\f104";
+    $font-Flaticon-cow-waste-to-bio-mass: "\f105";
+    $font-Flaticon-crossflow-turbine: "\f106";
+    $font-Flaticon-cycle-of-bio-mass: "\f107";
+    $font-Flaticon-cycle-sketch-of-bio-mass-into-energy: "\f108";
+    $font-Flaticon-earth-connected: "\f109";
+    $font-Flaticon-earth-outline: "\f10a";
+    $font-Flaticon-earth-planet: "\f10b";
+    $font-Flaticon-earth-spectrum: "\f10c";
+    $font-Flaticon-eco-friendly-home: "\f10d";
+    $font-Flaticon-eco-solar-panel-in-sunlight: "\f10e";
+    $font-Flaticon-eco-solar-panel-under-bright-sun: "\f10f";
+    $font-Flaticon-ecological-solar-panel-tool: "\f110";
+    $font-Flaticon-ecological-solar-panels-couple-in-sunlight: "\f111";
+    $font-Flaticon-energy-source: "\f112";
+    $font-Flaticon-energy-source-1: "\f113";
+    $font-Flaticon-energy-source-2: "\f114";
+    $font-Flaticon-energy-source-symbol: "\f115";
+    $font-Flaticon-energy-source-symbol-1: "\f116";
+    $font-Flaticon-energy-source-symbol-2: "\f117";
+    $font-Flaticon-energy-source-symbol-3: "\f118";
+    $font-Flaticon-energy-source-symbol-variant: "\f119";
+    $font-Flaticon-energy-sources: "\f11a";
+    $font-Flaticon-fixed-pitch-propeller-turbine: "\f11b";
+    $font-Flaticon-forest-waste-to-bio-mass: "\f11c";
+    $font-Flaticon-francis-turbine: "\f11d";
+    $font-Flaticon-house-with-solar-panel-installed: "\f11e";
+    $font-Flaticon-hydro-power-plant: "\f11f";
+    $font-Flaticon-hydro-power-plant-under-production: "\f120";
+    $font-Flaticon-hydro-power-with-power-lines: "\f121";
+    $font-Flaticon-hydro-power-with-turbine: "\f122";
+    $font-Flaticon-industrial-waste-to-bio-mass: "\f123";
+    $font-Flaticon-insulator-tool-outline: "\f124";
+    $font-Flaticon-kaplan-turbine: "\f125";
+    $font-Flaticon-light-connected-to-battery-and-solar-panel: "\f126";
+    $font-Flaticon-mobile-and-laptop-charging-with-solar-panel: "\f127";
+    $font-Flaticon-natural-energy-source: "\f128";
+    $font-Flaticon-pelton-turbine-wheel: "\f129";
+    $font-Flaticon-power-housing-with-power-lines: "\f12a";
+    $font-Flaticon-power-line-connected-towers: "\f12b";
+    $font-Flaticon-power-line-with-four-insulators: "\f12c";
+    $font-Flaticon-power-line-with-six-insulators: "\f12d";
+    $font-Flaticon-power-line-with-three-insulators: "\f12e";
+    $font-Flaticon-sewage-to-bio-mass: "\f12f";
+    $font-Flaticon-solar-panel-in-sunlight: "\f130";
+    $font-Flaticon-solar-panel-in-sunlight-1: "\f131";
+    $font-Flaticon-solar-panels-couple-in-sunlight: "\f132";
+    $font-Flaticon-solar-powered-house-building-with-solar-panels-on-the-roof: "\f133";
+    $font-Flaticon-sources-of-bio-mass: "\f134";
+    $font-Flaticon-sources-of-eco-bio-mass: "\f135";
+    $font-Flaticon-straight-view-of-solar-panel: "\f136";
+    $font-Flaticon-sun-energy-natural-source: "\f137";
+    $font-Flaticon-sun-radiation-symbol: "\f138";
+    $font-Flaticon-transmission-line-with-three-insulators: "\f139";
+    $font-Flaticon-turgo-turbine: "\f13a";
+    $font-Flaticon-wheat-waste-to-bio-mass: "\f13b";

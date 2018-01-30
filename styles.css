@@ -1,0 +1,607 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  width: 100vw;
+  /*font: 15px/26px "Roboto", sans-serif;*/
+}
+
+/***************************** МЕНЮ ******************************/
+
+header {
+  border: 1px solid black;
+  width: 100vw;
+  height: 100px;
+  position: fixed;
+  background-color: transparent;
+  z-index: 1000;
+  border-bottom-color: #fff;
+}
+
+div#logo {
+  padding-top: 5px;
+  padding-left: 8px;
+  position: absolute;
+  width: 70px;
+  float: left;
+}
+
+.menu {
+  right: 40px;
+  position: absolute;
+}
+
+ul.menu, ul.sub-menu {
+  list-style-type: none;
+  padding: 37px 0;
+  margin: 0;
+  top: 0;
+}
+
+ul.sub-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  background-color: rgb (33, 33, 33);
+}
+
+ul.menu li {
+  display: inline-block;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-top: 10px;
+}
+
+ul.sub-menu li {
+  width: 100%;
+  display: block;
+  margin: 0;
+  padding-top: 10px;
+}
+
+ul.sub-menu.hidden2 {
+  top: 27px;
+  left: 130px;
+  width: 230px;
+  padding-left: 15px;
+}
+
+ul.menu li a, ul.sub-menu li a {
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+
+ul.menu li a:hover, ul.sub-menu li a:hover {
+  color: rgb(161, 206, 33);
+  border-bottom-color: rgb(161, 206, 33);
+}
+
+ul.sub-menu li a {
+  border-bottom: 1px solid white;
+}
+
+ul li a:hover+.sub-menu, .sub-menu:hover, ul li a:hover+.sub-menu, .sub-menu:hover {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+input.show-menu-trigger[type=checkbox] {
+  display: none;
+}
+
+input.show-menu-trigger[type=checkbox]:checked~.menu {
+  display: block;
+}
+
+.show-menu i {
+  display: none;
+}
+
+header:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 760px) {
+  .show-menu {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    background: rgb(161, 206, 33);
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 40px;
+    top: 30px;
+    cursor: pointer;
+  }
+  .show-menu i {
+    display: block;
+  }
+  .show-menu i::before {
+    position: absolute;
+    top: 17px;
+    right: 17px;
+  }
+  ul.menu {
+    padding-left: 0px;
+    width: 100%;
+    margin-top: 100px;
+  }
+  ul.menu, ul.sub-menu {
+    display: none;
+    padding: 0;
+  }
+  ul.sub-menu {
+    position: relative;
+    top: 0;
+  }
+  .menu {
+    margin-top: 100px;
+    right: 0;
+  }
+  ul.menu li, ul.sub-menu li {
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    margin: 0;
+  }
+  ul.menu li a, ul.sub-menu li a {
+    width: 100%;
+    border-bottom: 1px solid white;
+  }
+  ul.sub-menu.hidden2 {
+    top: unset;
+    left: unset;
+    width: 100%
+  }
+  ul.sub-menu.hidden2 li a {
+    position: relative;
+  }
+  .show-menu {
+    display: block;
+  }
+  .sub-menu {
+    position: relative;
+  }
+}
+
+/********************** поиск *************************************/
+
+#search-form.open #search {
+  width: 430px;
+}
+
+#search-form #search {
+  border-color: #a1ce4f;
+  background-color: #fff;
+  color: #878787;
+}
+
+#search-form #search {
+  width: 0;
+  height: 50px;
+  padding: 0 40px 0 25px;
+  border: 1px solid #a1ce4f;
+  border-radius: 0;
+  background-color: #fff;
+  color: #878787;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#search-form a.close {
+  color: #878787;
+}
+
+#search-form a.close {
+  position: absolute;
+  top: 1px;
+  right: -10px;
+  border-bottom: none;
+  color: #878787;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 1;
+}
+
+/********************** КАРУСЕЛЬ *************************************/
+
+h1[class*='slide'] {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  z-index: 50px;
+  position: absolute;
+  top: 500px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 45px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/****************************** MAIN CONTAINER ****************************/
+
+.headline {
+  padding-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.headline span, .headline-text-left span {
+  color: rgb(161, 206, 33);
+  font-weight: 300;
+}
+
+.headline-text-left {
+  padding-top: 20px;
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+section.type-energy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 70px;
+}
+
+figure {
+  width: 300px;
+  color: #878787;
+  text-align: justify;
+}
+
+h5 a {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+h5 a:hover {
+  color: rgb(161, 206, 33);
+}
+
+@media screen and (min-width: 760px) {
+  section.type-energy {
+    flex-direction: row;
+  }
+}
+
+/************************************** LINE************************/
+
+.line-contaner {
+  width: 100vw;
+  height: 300px;
+  background-image: url(images/index-bg-2.jpg);
+  margin-bottom: 20px;
+}
+
+.line {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.parallax-window {
+  min-height: 400px;
+  background: transparent;
+}
+
+/************************************** achievements************************/
+
+.achievements .col1, .achievements .col2 {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.achievements {
+  padding: 30px 50px 30px 10px;
+}
+
+div[class^='achieve-item'] {
+  margin: 0 15px 40px 15px;
+  display: block;
+}
+
+div[class^='achieve-item']>i {
+  font-family: materia-icons!important;
+  font-size: 72px;
+  line-height: 72px;
+  display: block;
+  float: left;
+  color: rgb(161, 206, 33);
+}
+
+.achieve-text {
+  display: block;
+  margin-left: 100px;
+}
+
+.materia-icon-hydro-power-plant:before {
+  content: "\e9bc";
+}
+
+.materia-icon-turgo-turbine:before {
+  content: "\ea3f";
+}
+
+.materia-icon-kaplan-turbine:before {
+  content: "\e9c2"
+}
+
+.materia-icon-straight-view-of-solar-panel:before {
+  content: "\ea2f";
+}
+
+.achieve-text>h5 {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+div[class$='-text']>p {
+  text-align: justify;
+  color: #878787;
+}
+
+@media (min-width: 768px) {
+  .achievements .col1, .achievements .col2 {
+    width: 50%;
+    float: left;
+  }
+}
+
+/********************************************* FOOTER **************************************/
+
+footer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #121212;
+  color: #949494;
+  padding: 0;
+  margin: 0;
+}
+
+footer>div, .logo {
+  text-align: center;
+  flex: 1;
+  padding-top: 20px;
+}
+
+i[class^='footer'] {
+  height: 2em;
+}
+
+form.mail {
+  flex: 1;
+  padding-top: 30px;
+  padding-bottom: 70px;
+}
+
+@media screen and (min-width: 840px) {
+  footer {
+    flex-direction: row;
+  }
+}
+
+/*********************************** НОВОСТИ***********************************/
+
+/*********************************** SLIDER-IMG ***********************************/
+
+div[class^='slide-contaner-'] {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+  width: 100vw;
+  height: 500px;
+  margin: 0, auto;
+  z-index: -1;
+}
+
+.news-slide {
+  position: absolute;
+  top: 300px;
+  left: 100px;
+  color: white;
+  font-size: 2em;
+}
+
+/*********************************** ACCARDION ***********************************/
+
+.container-accordion {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.accordion {
+  background-color: #eee;
+  color: rgb(33, 33, 33);
+  cursor: pointer;
+  padding: 25px 50px 25px 40px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.accordion p {
+  text-align: justify;
+  max-width: 1400px;
+}
+
+.panel p {
+  text-align: justify;
+  text-indent: 20px;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: 'Читать дальше...';
+  color: rgb(161, 206, 33);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0px 50px 0px 40px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease-out;
+}
+
+/*полный режим*/
+
+@media (min-width: 750px) {
+  .accordion img {
+    float: left;
+    padding-right: 30px;
+    margin-bottom: 75px;
+    margin-top: 20px;
+  }
+}
+
+.slide-contaner {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+  width: 100vw;
+  height: 950px;
+  margin: 0, auto;
+}
+
+/*********************************** solar-energy ***********************************/
+
+.container-solar-block1 {
+  max-width: 1500px;
+  margin: 0 auto;
+
+
+}
+.solar {
+  display: flex;
+padding: 30px;
+}
+.solar>div {
+width: 400px;
+text-align: justify;
+}
+.preim ul li {
+  text-align: justify;
+  color: #878787;
+  list-style-position: outside;
+}
+.preim h4 {
+  padding-left: 30px;
+}
+.container-solar-block1 div img {
+  width: 600px;
+}
+@media (max-width: 1400px) {
+  .solar {
+    display: block;
+    text-align: center;
+    
+  }
+  .solar-text, .preim {
+    float: left;
+    margin: 0 auto;
+  }
+}
+/*********************************** black-line ***********************************/
+
+.black-line {
+  width: 100wv;
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+}
+
+.black-line i {
+margin-bottom: 25px;
+font-size: 72px;
+line-height: 72px;
+}
+.black-line i:hover, .black-line-headline:hover {
+  color: rgb(161, 206, 33);
+  cursor: pointer;
+}
+.row {
+  display: inline-block;
+}
+
+.row>div {
+  padding: 20px;
+}
+.materia-icon-solar-panel-in-sunlight-1:before {
+  content: "\ea25"
+}
+.materia-icon-house-with-solar-panel-installed:before {
+  content: "\e9bb"
+}
+.bg-container {
+  position: relative;
+}
+.bg {
+  position: absolute;
+  min-height: 400px;
+  right: 0;
+  top:0;
+}
+.bg-container p{
+  width: 900px;
+  padding-right: 300px;
+  margin: 20px auto 150px;
+  
+}
