@@ -1,0 +1,295 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="assets/materia-icons/materia-icons.css" rel="stylesheet">
+  <link link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.css">
+  <script src="assets/jquery/jquery.min.js"></script>
+  <script src="assets/jquery-parallax/parallax.min.js"></script>
+  <script>jQuery(window).trigger('resize').trigger('scroll');
+
+    $('.parallax-window').parallax({
+      naturalWidth: 600,
+      naturalHeight: 400
+    });
+    
+		$(document).ready(() => {
+			console.log('document is ready!')
+
+			function timer() {
+				setTimeout(() => {
+					$('[data-slider-button-type="next"]').click();
+					timer();
+				}, 10000);
+			}
+    });
+    
+		$(document).ready(function () {
+			var currentPageHeight = $('.main-img-page').height();
+
+			$(document).scroll(function ($event) {
+				if ($(document).scrollTop() > (currentPageHeight - 50)) {
+					$('header').removeClass('menu-background-when-no-scrolled');
+					$('header').addClass('menu-background-when-scrolled');
+				} else {
+					$('header').removeClass('menu-background-when-scrolled');
+					$('header').addClass('menu-background-when-no-scrolled');
+				}
+			})
+		});
+  </script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>Энергия воды</title>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header id="header-container">
+
+    <!-- LOGO -->
+    <div id="logo">
+      <a href="index.html">
+        <img src="images/logo.jpg" alt="Логотип сайта">
+      </a>
+    </div>
+    <!-- LOGO -->
+
+    <!-- MENU -->
+    <nav>
+      <label for="show-menu" class="show-menu">
+        <i class="fa fa-bars"></i>
+      </label>
+      <input type="checkbox" id="show-menu" class="show-menu-trigger">
+
+      <ul class="menu">
+        <li>
+          <a href="index.html">Главная</a>
+        </li>
+        <li>
+          <a href="news.html">Новости</a>
+        </li>
+        <li>
+          <a href="#">Источники энергии
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </i>
+            </i>
+          </a>
+          <ul class="sub-menu">
+            <li>
+              <a href="wind_energy.html">Энергия ветра</a>
+            </li>
+            <li>
+              <a href="solar_energy.html">Энергия солнца
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </i>
+              </a>
+              <ul class="hidden2 sub-menu">
+                <li>
+                  <a href="solar_energy.html#tab-solarl">Фотоэлектрические панели</a>
+                </li>
+                <li>
+                  <a href="solar_energy.html#tab-solar">Солнечные коллекторы</a>
+                </li>
+                <li>
+                  <a href="solar_energy.html#tab-solar">Cолнечная электростанция </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="hydro_energy.html">Энергия воды</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="in_Belarus.html">ВЭР в Беларуси</a>
+        </li>
+      </ul>
+
+    </nav>
+
+  </header>
+  <!-- HEADER CONTAINER -->
+
+  <!-- slider -->
+  <div class="main-img-page-container main-img-page">
+    <img src="images/hydro4.jpg" alt="Изображение гидроэлектростанции">
+    <div class="main-text-page-left">
+      <h1 class="main-headline">Гидроэнергетика</h1>
+      <p class="second-headline"> [ Основные направления ]</p>
+    </div>
+
+  </div>
+  <!-- slider -->
+
+  <div class="container-hydro_energy">
+
+      <div class="container-box-block1">
+  
+        <div class="headline-text-left">
+          <p>Коротко о главном</p>
+          <h1>Условия для
+            <span>солнечной энергии </span>
+          </h1>
+        </div>
+        <div class="box">
+            <div class="diagram">
+                <img src="images/hydro-schema.svg.png" alt="Диаграмма использования солнечной энергии по странам">
+              </div>
+          <div class="container-text" >
+              <div class="preim">
+                  <h4>Преимущества</h4>
+                  <ul>
+                    <li>Перспективность, доступность и неисчерпаемость источника энергии в условиях постоянного роста цен на традиционные
+                      виды энергоносителей.
+                    </li>
+                    <li>полная безопасность для окружающей среды</li>
+                  </ul>
+                  <h4>Недостатки</h4>
+                  <ul>
+                    <li>Зависимость от погоды и времени суток[</li>
+                    <li>Сезонность в средних широтах и несовпадение периодов выработки энергии и потребности в энергии.</li>
+                    <li>Необходимость использования больших площадей</li>
+                    <li>Высокая стоимость конструкции, связанная с применением редких элементов</li>
+                  </ul>
+                </div>
+
+
+            <div class="box-text">
+              <p>Поток солнечного излучения, проходящий через площадку в 1 м², расположенную перпендикулярно потоку излучения
+                на расстоянии одной астрономической единицы от центра Солнца (на входе в атмосферу Земли), равен 1367 Вт/м²
+                (солнечная постоянная). Из-за поглощения, при прохождении атмосферной массы Земли, максимальный поток солнечного
+                излучения на уровне моря (на Экваторе) — 1020 Вт/м². Однако следует учесть, что среднесуточное значение потока
+                солнечного излучения через единичную горизонтальную площадку как минимум в π раза меньше (из-за смены дня и
+                ночи и изменения угла солнца над горизонтом). Зимой в умеренных широтах это значение в два раза меньше.</p>
+            </div>
+  
+            
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+
+
+
+  <section class="section-tab parallax" data-stellar-background-ratio="0.1" style="background-position: 50% -12.9px;">
+    <div class="opacity">
+      <div class="parallax-window" data-parallax="scroll" data-image-src="images/wind-bg1.jpg">
+
+        <div class="headline-text-center">
+          <p>Гидроэнергетика:</p>
+          <h2> 4 факта,
+            <span> о которых вы не знали</span>
+          </h2>
+        </div>
+
+
+        <div class="container">
+          <div class="tabs vertical-tabs">
+
+            <ul class="nav nav-tabs">
+              <li class="active">
+                <a href="#tab-1" data-toggle="tab">Крупнейшая в СНГ</a>
+              </li>
+              <li>
+                <a href="#tab-2" data-toggle="tab">Самая маленькая ГЭС</a>
+              </li>
+              <li>
+                <a href="#tab-3" data-toggle="tab">Плотина времен неолита</a>
+              </li>
+              <li>
+                <a href="#tab-4" data-toggle="tab">Первая в мире </a>
+              </li>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-pane fade in active" id="tab-1">
+
+                <p>Уложенного при строительстве плотины Саяно-Шушенской ГЭС бетона хватило бы на постройку автострады от Санкт-Петербурга до Владивостока. Уникальная арочно-гравитационная плотина станции высотой 245 м в Республике Хакасия — самая высокая в стране и одна из высочайших в мире. Название станции происходит от названий Саянских гор и расположенного неподалеку села Шушенское, которое широко известно как место ссылки Владимира Ленина. Строительство Саяно-Шушенской ГЭС, начатое в 1963 году, было официально завершено только 37 лет спустя. С 2009 по 2014 годы станция была восстановлена после аварии и полностью модернизирована.</p>
+
+                <p>Технически возможно строительство в России и более крупных ГЭС. Так, на реке Нижняя Тунгуска можно возвести ГЭС мощностью 12−20 тысяч МВт с уникальным, крупнейшим в мире по объему водохранилищем. Такая ГЭС могла бы стань настоящим государственным энергетическим резервом страны, обеспечивая в экстремальной ситуации существенную часть общего энергопотребления.</p>
+
+              </div>
+              <!-- tab-pane -->
+              <div class="tab-pane fade" id="tab-2">
+
+                <p>Самая маленькая ГЭС помещается в кармане</p>
+
+                <p>Самой маленькой в мире ГЭС, которая весит всего 400 граммов, является Blue Freedom Hydropower Plant 
+                    с турбиной диаметром всего 12 см. Несмотря на мизерные размеры, все по-настоящему: «Голубая свобода» 
+                    состоит из турбины и основного блока, в котором размещены литий-полимерные аккумуляторы емкостью 5000 мА•ч 
+                    и генератор максимальной мощностью 5 Вт. Этого более чем достаточно, чтобы зарядить смартфон или, скажем, фонарик.</p>
+
+              </div>
+              <!-- tab-pane -->
+              <div class="tab-pane fade" id="tab-3">
+
+                <p>По мнению большинства историков, самая древняя из известных плотин в мире была построена за 3000 лет 
+                  до нашей эры в 100 км от Аммана, столицы Иордании, тогда — Аммонского царства. Ее высота составляла 4,5 м, толщина — 1 м.</p>
+
+                <p>Русское географическое общество, однако, утверждает, что старейшая рукотворная плотина находится в 
+                  Краснодарском крае. Уникальные насыпи из глины были обнаружены в пещере Трю-44 (или теперь — Плотинная) 
+                  горного хребта Скирд в Мостовском районе. Древние люди построили их, чтобы собирать воду, стекавшую 
+                  по стенкам пещеры. По предварительным оценкам, возраст этой необычной плотины превышает 10 000 лет.</p>
+
+              </div>
+              <!-- tab-pane -->
+              <div class="tab-pane fade" id="tab-4">
+
+                <p>30 сентября 1882 года заработала первая в мире гидроэлектростанция</p>
+
+                <p>Первая в мире ГЭС заработала на реке Фокс в небольшом американском городке Эпплтон, что в штате Висконсин. 
+                  Пионером американского гидростроя стал владелец местной бумажной фабрики Роджерс. За сорок лет до плана 
+                  ГОЭЛРО он установил динамо-машину, которую приводило в движение водяное колесо, и получил киловатты, 
+                  необходимые для освещения его дома, фабрики и соседних строений. Новшество имело успех, о нем написали 
+                  газеты, и процесс, начатый прогрессивным американским бумажником, пошел. Мощность ГЭС была всего 1 л.с.</p>
+                  <p>Первая же, по-настоящему промышленная ГЭС на Ниагаре (Ниагара Фоле), предназначенная для электроснабжения г. Буффало, 
+                    заработала в 1890 г. На ней была реализована трехфазная система тока, передача электроэнергии осуществлялась на расстояние 40 км.</p>
+              </div>
+              <!-- tab-pane -->
+            </div>
+
+          </div>
+        </div>
+        <!-- container -->
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer>
+    <div class="logo">
+      <img src="images/footer-image.png" alt="Логотип сайта">
+    </div>
+    <div>
+      <h4>КОНТАКТЫ</h4>
+      <p>
+        <i class="fa fa-envelope-o" aria-hidden="true" class="footer-mail"> o.m.murashko@gmail.com</i>
+      </p>
+      <p>
+        <i class="fa fa-map-marker" aria-hidden="true" class="footer-adress"> г. Минск, Пл. 8 Марта, 20</i>
+      </p>
+    </div>
+    <form class="mail" action="o.m.murashko@gmail.com">
+      <h4>НОВОСТНАЯ РАССЫЛКА</h4>
+      <input type="text" name="email" />
+      <input type="submit" name="podpisatsya" value="Подписаться" />
+    </form>
+  </footer>
+
+</body>
+
+</html>

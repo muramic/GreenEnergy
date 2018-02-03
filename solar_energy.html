@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link link rel="stylesheet" type="text/css" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="assets/materia-icons/materia-icons.css" rel="stylesheet">
@@ -15,7 +17,38 @@
       naturalWidth: 600,
       naturalHeight: 400
     });
+
+    $(document).ready(() => {
+      console.log('document is ready!')
+
+      function timer() {
+        setTimeout(() => {
+          $('[data-slider-button-type="next"]').click();
+          timer();
+        }, 10000);
+      }
+    })
+
+    $(document).ready(function () {
+      var currentPageHeight = $('.main-img-page').height();
+
+      $(document).scroll(function ($event) {
+        if ($(document).scrollTop() > (currentPageHeight - 50)) {
+          $('header').removeClass('menu-background-when-no-scrolled');
+          $('header').addClass('menu-background-when-scrolled');
+        } else {
+          $('header').removeClass('menu-background-when-scrolled');
+          $('header').addClass('menu-background-when-no-scrolled');
+          //
+        }
+      })
+    });
   </script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <title>Энергия солнца</title>
 
 </head>
@@ -48,12 +81,12 @@
           <a href="news.html">Новости</a>
         </li>
         <li>
-          <a href="sources_energy.htm">Источники энергии
+          <a href="#">Источники энергии
             <i class="fa fa-angle-down" aria-hidden="true"></i>
             </i>
             </i>
           </a>
-          <ul class="hidden sub-menu">
+          <ul class="sub-menu">
             <li>
               <a href="wind_energy.html">Энергия ветра</a>
             </li>
@@ -64,18 +97,18 @@
               </a>
               <ul class="hidden2 sub-menu">
                 <li>
-                  <a href="solar_panel.html">Фотоэлектрические панели</a>
+                  <a href="solar_energy.html#tab-solar">Фотоэлектрические панели</a>
                 </li>
                 <li>
-                  <a href="solar_termal_collector.html">Солнечные коллекторы</a>
+                  <a href="solar_energy.html#tab-solar">Солнечные коллекторы</a>
                 </li>
                 <li>
-                  <a href="solar_termal_power_plant.html">Cолнечная тепловая </a>
+                  <a href="solar_energy.html#tab-solar">Cолнечная электростанция </a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="hydroelectric_energy.html">Энергия воды</a>
+              <a href="hydro_energy.html">Энергия воды</a>
             </li>
           </ul>
         </li>
@@ -90,11 +123,11 @@
   <!-- HEADER CONTAINER -->
 
   <!-- slider -->
-  <div class="slide-container-solar">
+  <div class="main-img-page-container main-img-page">
     <img src="images/solar_main.jpg" alt="Изображение солнечных панелей">
-    <div class="news-slide">
-      <h1>Солнечная энергия</h1>
-      <p class="solar-headline"> [ Основные направления ]</p>
+    <div class="main-text-page-left">
+      <h1 class="main-headline">Солнечная энергия</h1>
+      <p class="second-headline"> [ Основные направления ]</p>
     </div>
 
   </div>
@@ -103,111 +136,202 @@
   <!-- CONTEXT -->
   <div class="container-solar_energy">
 
+    <div class="container-box-block1">
 
-    <div class="container-solar-block1">
-      <h4 class="headline-text-left">Земные условия для
-        <span>солнечной энергии </span>
-      </h4>
-      <div class="solar">
-        <div class="solar-text">
-          <p>Поток солнечного излучения, проходящий через площадку в 1 м², расположенную перпендикулярно потоку излучения на
-            расстоянии одной астрономической единицы от центра Солнца (на входе в атмосферу Земли), равен 1367 Вт/м² (солнечная
-            постоянная). Из-за поглощения, при прохождении атмосферной массы Земли, максимальный поток солнечного излучения
-            на уровне моря (на Экваторе) — 1020 Вт/м². Однако следует учесть, что среднесуточное значение потока солнечного
-            излучения через единичную горизонтальную площадку как минимум в π раза меньше (из-за смены дня и ночи и изменения
-            угла солнца над горизонтом). Зимой в умеренных широтах это значение в два раза меньше.</p>
-        </div>
+      <div class="headline-text-left">
+        <p>Коротко о главном</p>
+        <h1>Условия для
+          <span>солнечной энергии </span>
+        </h1>
+      </div>
+      <div class="box">
 
-        <div class="preim">
-          <h4>Преимущества</h4>
-          <ul>
-            <li>Перспективность, доступность и неисчерпаемость источника энергии в условиях постоянного роста цен на традиционные
-              виды энергоносителей.
-            </li>
-            <li>полная безопасность для окружающей среды</li>
-          </ul>
-          <h4>Недостатки</h4>
-          <ul>
-            <li>Зависимость от погоды и времени суток[</li>
-            <li>Сезонность в средних широтах и несовпадение периодов выработки энергии и потребности в энергии.</li>
-            <li>Необходимость использования больших площадей</li>
-            <li>Высокая стоимость конструкции, связанная с применением редких элементов</li>
-          </ul>
+        <div class="container-text">
+
+          <div class="box-text1">
+            <p>Поток солнечного излучения, проходящий через площадку в 1 м², расположенную перпендикулярно потоку излучения
+              на расстоянии одной астрономической единицы от центра Солнца (на входе в атмосферу Земли), равен 1367 Вт/м²
+              (солнечная постоянная). Из-за поглощения, при прохождении атмосферной массы Земли, максимальный поток солнечного
+              излучения на уровне моря (на Экваторе) — 1020 Вт/м². Однако следует учесть, что среднесуточное значение потока
+              солнечного излучения через единичную горизонтальную площадку как минимум в π раза меньше (из-за смены дня и
+              ночи и изменения угла солнца над горизонтом). Зимой в умеренных широтах это значение в два раза меньше.</p>
+          </div>
+
+          <div class="preim">
+            <h4>Преимущества</h4>
+            <ul>
+              <li>Перспективность, доступность и неисчерпаемость источника энергии в условиях постоянного роста цен на традиционные
+                виды энергоносителей.
+              </li>
+              <li>полная безопасность для окружающей среды</li>
+            </ul>
+            <h4>Недостатки</h4>
+            <ul>
+              <li>Зависимость от погоды и времени суток</li>
+              <li>Сезонность в средних широтах и несовпадение периодов выработки энергии и потребности в энергии.</li>
+              <li>Необходимость использования больших площадей</li>
+              <li>Высокая стоимость конструкции, связанная с применением редких элементов</li>
+            </ul>
+          </div>
         </div>
         <div class="diagram">
           <img src="images/solar-diagram.jpeg" alt="Диаграмма использования солнечной энергии по странам">
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="black-line">
-        <h1>Основные направления солнечной энергетики</h1>
-        <h4> Возобновляемые источники энергии и значительные возможности для повышения энергоэффективности.</h4>
-        <h4>Проблемы изменения климата и глобального потепления в сочетании с высокими ценами на нефть и растущей государственной
-          поддержкой стиммулируют коммерческое использование возобновляемых источников энергии. </h4>
-      
-      <div class="row">
-        <div class="black-line-item1">
-          <i class="materia-icon-kaplan-turbine"></i>
-          <div class="black-line-text">
-            <h4 class="black-line-headline">Плавучая ветровая ферма</h4>
-          </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="black-line-item2">
-          <i class="materia-icon-solar-panel-in-sunlight-1"></i>
-          <div class="black-line-text">
-            <h4 class="black-line-headline">Фотоэлектрическая панель</h4>
-          </div>
-        </div>
-      </div>
+  <div class="black-line">
+    <h1>Основные направления солнечной энергетики</h1>
+    <h4> Возобновляемые источники энергии и значительные возможности для повышения энергоэффективности.</h4>
+    <h4>Проблемы изменения климата и глобального потепления в сочетании с высокими ценами на нефть и растущей государственной
+      поддержкой стиммулируют коммерческое использование возобновляемых источников энергии. </h4>
 
-      <div class="row">
-        <div class="black-line-item3">
-          <i class="materia-icon-house-with-solar-panel-installed"></i>
-          <div class="black-line-text">
-            <h4 class="black-line-headline">Солнечный коллектор</h4>
-          </div>
+    <div class="row">
+      <div class="black-line-item1">
+        <i class="materia-icon-kaplan-turbine"></i>
+        <div class="black-line-text">
+          <h4 class="black-line-headline">Соляная бышня</h4>
         </div>
       </div>
     </div>
-    
-    <div class="bg-container">
+
+    <div class="row">
+      <div class="black-line-item2">
+        <i class="materia-icon-solar-panel-in-sunlight-1"></i>
+        <div class="black-line-text">
+          <h4 class="black-line-headline">Фотоэлектрическая панель</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="black-line-item3">
+        <i class="materia-icon-house-with-solar-panel-installed"></i>
+        <div class="black-line-text">
+          <h4 class="black-line-headline">Солнечный коллектор</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="parallax-window earth" data-parallax="scroll" data-image-src="images/index-bg-1.png">
+    <div class="bg-container text-justify">
       <p>
         Солнечная энергетика — направление альтернативной энергетики, основанное на непосредственном использовании солнечного излучения
-        для получения энергии в каком-либо виде. Солнечная энергетика использует возобновляемые источники энергии[1] и является
-        «экологически чистой», то есть не производящей вредных отходов во время активной фазы использования[2]. Производство
+        для получения энергии в каком-либо виде. Солнечная энергетика использует возобновляемые источники энергии и является
+        «экологически чистой», то есть не производящей вредных отходов во время активной фазы использования. Производство
         энергии с помощью солнечных электростанций хорошо согласовывается с концепцией распределённого производства энергии.
-        Гелиотермальная энергетика — нагревание поверхности, поглощающей солнечные лучи, и последующее распределение и использование
+      </p>
+      <p>Гелиотермальная энергетика — нагревание поверхности, поглощающей солнечные лучи, и последующее распределение и использование
         тепла (фокусирование солнечного излучения на сосуде с водой или солью для последующего использования нагретой воды
         для отопления, горячего водоснабжения или в паровых электрогенераторах). В качестве особого вида станций гелиотермальной
         энергетики принято выделять солнечные системы концентрирующего типа (CSP — Concentrated solar power). В этих установках
         энергия солнечных лучей с помощью системы линз и зеркал фокусируется в концентрированный луч света. Этот луч используется
         как источник тепловой энергии для нагрева рабочей жидкости.
       </p>
-      <img class="bg" src="images/index-bg-1.png" alt="">
+    </div>
+  </div>
+
+  <section class="section-tab-solar" id="tab-solar">
+    <div class="headline-text-center">
+      <p>Разделы</p>
+      <h2> Основные технологии в
+        <span> солнечной энергетике</span>
+      </h2>
     </div>
 
+
+    <div class="container">
+      <div class="tabs vertical-tabs">
+
+        <ul class="nav nav-tabs">
+          <li class="active">
+            <a href="#tab-1" data-toggle="tab">Фотоэлектрические панели</a>
+          </li>
+          <li>
+            <a href="#tab-2" data-toggle="tab">Солнечные коллекторы</a>
+          </li>
+          <li>
+            <a href="#tab-3" data-toggle="tab">Солнечная электростанция</a>
+          </li>
+
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane fade in active" id="tab-1">
+
+            <p>В основе фотоэлектричества лежит прямое преобразование солнечного излучения в электроэнергию посредством специальных
+              полупроводниковых элементов (фотоэлектрических преобразователей, ФЭП – они же кремниевые пластины), объединенных,
+              по возрастанию их площади, в солнечные модули (СМ), панели и батареи. </p>
+
+            <p>Фотоэлектрические системы прямого преобразования солнечной энергии в электрическую являются наиболее перспективными
+              среди нетрадиционных возобновляемых источников электрической энергии. Полученная энергия может использоваться
+              напрямую различными потребителями постоянного тока; запасаться в аккумуляторных батареях для последующего использования
+              и покрытия пиковых нагрузок; преобразовываться в переменный ток напряжением 220 В для питания различных потребителей
+              переменного тока.</p>
+
+          </div>
+          <!-- tab-pane -->
+          <div class="tab-pane fade" id="tab-2">
+
+            <p>Простейшим примером использования энергии солнца является нагрев воды для бытовых нужд в специальных солнечных
+              коллекторах. Этот метод широко используется в южных странах, таких как Израиль, Турция, Греция, Китай, Хорватия,
+              где энергия солнца очень выгодна.</p>
+
+            <p>Коллекторная трубка Heat pipe - состоит из двух вставленных друг в друга трубок, между которыми находится вакуум.</p>
+            <p>За счет вакуума в трубках потери тепла сведены к минимуму. Эффективность использования солнечного излучения близится
+              к 100%благодаря специальному селективному покрытию трубки. Из-за этого нагрев происходит быстро - температура
+              начинает расти через 2-3 минуты после восхода Солнца.</p>
+            <p>Внутри вакуумных трубок проходит медная трубка для передачи тепловой энергии Солнца в основной медный коллектор,
+              закрытый термокожухом. Благодаря этому, коллектор с трубками Heat pipe эффективен при любой температуре, и
+              его работа зависит только от наличия солнечного света.</p>
+            <p>Коллекторы с трубками Heat pipe предназначены для использования в закрытых системах, подключенных к напорному
+              водопроводу. Среднегодовая производительность одной трубки - 10 литров воды от 10 до 60С.</p>
+          </div>
+          <!-- tab-pane -->
+          <div class="tab-pane fade" id="tab-3">
+
+            <p>Солнечная электростанция состоит из 300 тысяч солнечных зеркал (гелиостатов). В окружении этих гелиостатов возвышаются
+              почти на 140 метров три башни. Солнечный свет, поступающий в зеркала, нагревает воду, содержащуюся в башнях.
+              В результате получается сильно разогретый пар, который вращает вырабатывающие энергию турбины.</p>
+
+            <p>В калифорнийской пустыне Мохаве начата эксплуатация крупнейшей в мире солнечной электростанции Ivanpah Solar
+              Electric Generating System, вырабатывающей энергию из тепла, которым одаряет Землю согревающее ее светило.
+              Площадь гигантского «зеркала» составляет более 14 квадратных километров. Электростанция построена при поддержке
+              таких могучих корпораций, как Google, BrightSource Energy и Bechtel. </p>
+
+          </div>
+
+          <!-- tab-pane -->
+        </div>
+
+      </div>
+    </div>
+    <!-- container -->
+  </section>
+
+
+
   <footer>
-      <div class="logo">
-        <img src="images/footer-image.png" alt="Логотип сайта">
-      </div>
-      <div>
-        <h4>КОНТАКТЫ</h4>
-        <p>
-          <i class="fa fa-envelope-o" aria-hidden="true" class="footer-mail"> o.m.murashko@gmail.com</i>
-        </p>
-        <p>
-          <i class="fa fa-map-marker" aria-hidden="true" class="footer-adress"> г. Минск, Пл. 8 Марта, 20</i>
-        </p>
-      </div>
-      <form class="mail" action="o.m.murashko@gmail.com">
-        <h4>НОВОСТНАЯ РАССЫЛКА</h4>
-        <input type="text" name="email" />
-        <input type="submit" name="podpisatsya" value="Подписаться" />
-      </form>
+    <div class="logo">
+      <img src="images/footer-image.png" alt="Логотип сайта">
+    </div>
+    <div>
+      <h4>КОНТАКТЫ</h4>
+      <p>
+        <i class="fa fa-envelope-o" aria-hidden="true" class="footer-mail"> o.m.murashko@gmail.com</i>
+      </p>
+      <p>
+        <i class="fa fa-map-marker" aria-hidden="true" class="footer-adress"> г. Минск, Пл. 8 Марта, 20</i>
+      </p>
+    </div>
+    <form class="mail" action="o.m.murashko@gmail.com">
+      <h4>НОВОСТНАЯ РАССЫЛКА</h4>
+      <input type="text" name="email" />
+      <input type="submit" name="podpisatsya" value="Подписаться" />
+    </form>
   </footer>
 
 </body>
