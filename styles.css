@@ -232,7 +232,12 @@ input.show-menu-trigger[type=checkbox]:checked~.menu {
 
 .main-text-center {
   position: absolute;
-  top: 500px;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
 }
 
 .main-text-center .main-headline {
@@ -357,9 +362,7 @@ input.show-menu-trigger[type=checkbox]:checked~.menu {
 }
 
 @media screen and (max-width: 760px) {
-  .main-text-center {
-    top: 320px;
-  }
+  
   .main-text-center .main-headline {
     width: 80%;
     margin: auto;
@@ -378,6 +381,7 @@ input.show-menu-trigger[type=checkbox]:checked~.menu {
 
 .main-text-page-left .main-headline {
   font-size: 4em;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   margin: 0;
 }
 
@@ -395,8 +399,8 @@ input.show-menu-trigger[type=checkbox]:checked~.menu {
 @media screen and (max-width: 760px) {
   .main-text-page-left {
     position: absolute;
-    top: 150px;
-    left: 30px;
+    top: 30%;
+    left: 15px;
   }
   .main-text-page-left .main-headline {
     font-size: 3em;
@@ -682,8 +686,8 @@ form.mail {
   overflow: hidden;
   align-items: center;
   width: 100vw;
-  height: 950px;
-  margin: 0, auto;
+  height: 100vh;
+  margin: 0 auto;
 }
 
 /*********************************** solar-energy ***********************************/
@@ -1181,4 +1185,5 @@ iframe.map {
 }
 .black {
   color: #121212;
+  font-weight: bold;
 }
