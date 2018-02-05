@@ -5,35 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="assets/materia-icons/materia-icons.css" rel="stylesheet">
-    <link link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.css">
     <script src="assets/jquery/jquery.min.js"></script>
     <script src="assets/jquery-parallax/parallax.min.js"></script>
-    <script>jQuery(window).trigger('resize').trigger('scroll');
 
-        $('.parallax-window').parallax({
-            naturalWidth: 600,
-            naturalHeight: 400
-        });
-
-        $(document).ready(function () {
-            var currentPageHeight = $('.main-img-page').height();
-
-            $(document).scroll(function ($event) {
-                if ($(document).scrollTop() > (currentPageHeight - 70)) {
-                    $('header').removeClass('menu-background-when-no-scrolled');
-                    $('header').addClass('menu-background-when-scrolled');
-                } else {
-                    $('header').removeClass('menu-background-when-scrolled');
-                    $('header').addClass('menu-background-when-no-scrolled');
-
-                }
-            })
-        });
-
-    </script>
+    <script type="text/javascript" src="menu.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -209,8 +188,8 @@
                         <p>Этот вид альтернативной энергетики начали развивать в Беларуси ещё позже, чем ВЭС – пуски солнечных
                             электростанций (СЭС), рассчитанных на работу с энергосистемой, а не на автономное энергоснабжение
                             отдельных энтузиастов, приходятся на последние 2 года. Зато по установленной мощности они уверенно
-                            догоняют ветряки. Впрочем, ситуация опять-таки похожа. Сегодня работают лишь несколько крупных
-                            станций:
+                            догоняют ветряки. Активно начали использовать энергию светила государственные и частные предприятия
+                            в местах, где нет электросетей. Сегодня работают лишь несколько крупных станций:
                         </p>
 
                         <ul>
@@ -260,14 +239,19 @@
 
             <div class="headline-text-left">
                 <p>Расположение</p>
-                <h1> Интерактивная карта министерства
+                <h1> Карта ВЭР министерства
                     <span>природных ресурсов РБ </span>
                 </h1>
             </div>
-
-            <iframe class="map" src="http://www.ipps.by:9083/apex/f?p=105:1:1231849227523135::NO:::&amp;tz=3:00">
+            <div class="map-container">
+                <img class="map" src="images/map.png " alt="Карта Беларуси с указанием альтернативных источников энергии">
+            </div>
+            <!-- <iframe class="map" src="http://www.ipps.by:9083/apex/f?p=105:1:1231849227523135::NO:::&amp;tz=3:00">
                 &lt;p&gt;Your browser does not support iframes.&lt;/p&gt;
-            </iframe>
+            </iframe> -->
+            <p>Ссылка на источник
+                <a href="http://www.ipps.by:9083/apex/f?p=105:1:1231849227523135::NO:::&amp;tz=3:00">здесь</a>
+            </p>
         </div>
 
 
@@ -286,26 +270,26 @@
             <div class="box-video">
 
                 <div class="video">
-                    <iframe src="https://www.youtube.com/embed/9Ic3hnqcd38" frameborder="0" allow="autoplay; encrypted-media"
-                        allowfullscreen>
+                    <iframe src="https://www.youtube.com/embed/9Ic3hnqcd38" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
                     </iframe>
                 </div>
 
                 <div class="container-text">
                     <div class="preim-in_Belarus">
-                        <h4>Преимущества</h4>
+                        <h4>Конструкция</h4>
                         <ul>
-                            <li>Перспективность, доступность и неисчерпаемость источника энергии в условиях постоянного роста
-                                цен на традиционные виды энергоносителей.
+                            <li>Витебская ГЭС представляет собой типичную русловую низконапорную гидроэлектростанцию, 
+                                включающую в себя бетонную водосбросную плотину, грунтовую плотину, здание ГЭС, 
+                                однокамерный однониточный судоходный шлюз, распределительное устройство.
                             </li>
-                            <li>полная безопасность для окружающей среды</li>
+                            <li>В декабре 2016 года станция начала вырабатывать электроэнергию</li>
                         </ul>
-                        <h4>Недостатки</h4>
+                        <h4>Мощность</h4>
                         <ul>
-                            <li>Зависимость от погоды и времени суток</li>
-                            <li>Сезонность в средних широтах и несовпадение периодов выработки энергии и потребности в энергии.</li>
-                            <li>Необходимость использования больших площадей</li>
-                            <li>Высокая стоимость конструкции, связанная с применением редких элементов</li>
+                            <li>Проектная мощность ГЭС — 40 МВт.</li>
+                            <li>Среднегодовая выработка — 138 млн.кВт·ч.</li>
+                            <li>В здании ГЭС установлены четыре горизонтальных капсульных гидроагрегата мощностью по 10 МВт.</li>
+                            <li>Подпорные сооружения ГЭС образуют водохранилище площадью 8,82 км² и объёмом 4,1 млн м³</li>
                         </ul>
                     </div>
 
@@ -334,11 +318,13 @@
                 <i class="fa fa-map-marker" aria-hidden="true"> г. Минск, Пл. 8 Марта, 20</i>
             </p>
         </div>
-        <form class="mail" action="o.m.murashko@gmail.com">
-            <h4>НОВОСТНАЯ РАССЫЛКА</h4>
-            <input type="text" name="email">
-            <input type="submit" name="podpisatsya" value="Подписаться">
-        </form>
+        <div>
+            <form class="mail" action="o.m.murashko@gmail.com">
+                <h4>НОВОСТНАЯ РАССЫЛКА</h4>
+                <input type="text" name="email">
+                <input type="submit" name="podpisatsya" value="Подписаться">
+            </form>
+        </div>
     </footer>
 
 </body>

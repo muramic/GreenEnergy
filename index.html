@@ -5,79 +5,16 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link href="assets/materia-icons/materia-icons.css" rel="stylesheet">
-	<link link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.css">
 	<script src="assets/jquery/jquery.min.js"></script>
 	<script src="assets/jquery-parallax/parallax.min.js"></script>
-	<script>jQuery(window).trigger('resize').trigger('scroll');
-
-		$('.parallax-window').parallax({
-			naturalWidth: 600,
-			naturalHeight: 400
-		});
-
-		$(document).ready(() => {
-			console.log('document is ready!')
-
-			function timer() {
-				setTimeout(() => {
-					$('[data-slider-button-type="next"]').click();
-					timer();
-				}, 10000);
-			}
-
-			function showSlide(index) {
-				$('[data-slider-number]').hide();
-				$('[data-slider-number=' + index + ']').show();
-			}
-
-			$('[data-slider-button-type="next"]').click(() => {
-				let slides = $('[data-slider-number]');
-				let currentSlide = $('[data-slider-number]:visible').attr('data-slider-number');
-
-				if ($(slides[slides.length - 1]).attr('data-slider-number') !== currentSlide) {
-					currentSlide++;
-				} else {
-					currentSlide = 1;
-				}
-
-				showSlide(currentSlide);
-			})
-
-			$('[data-slider-button-type="prev"]').click(() => {
-				let slides = $('[data-slider-number]');
-				let currentSlide = $('[data-slider-number]:visible').attr('data-slider-number');
-
-				if ($(slides[0]).attr('data-slider-number') !== currentSlide) {
-					currentSlide--;
-				} else {
-					currentSlide = $(slides[slides.length - 1]).attr('data-slider-number');
-				}
-
-				showSlide(currentSlide);
-			})
-
-			timer();
-		})
-
-		$(document).ready(function () {
-			var currentPageHeight = $('.main-img-page').height();
-
-			$(document).scroll(function ($event) {
-				if ($(document).scrollTop() > (currentPageHeight - 50)) {
-					$('header').removeClass('menu-background-when-no-scrolled');
-					$('header').addClass('menu-background-when-scrolled');
-				} else {
-					$('header').removeClass('menu-background-when-scrolled');
-					$('header').addClass('menu-background-when-no-scrolled');
-					//
-				}
-			})
-		});
-
-	</script>
+	
+	<script type="text/javascript" src="slideShow.js"></script>
+	<script type="text/javascript" src="common.js"></script>
+	<script type="text/javascript" src="menu.js"></script>
 
 	<title>Главная</title>
 
@@ -166,20 +103,20 @@
 	<div class="slide-contaner main-img-page" data-slider-number="1">
 		<img src="images/index-slide-1.jpg" alt="Ветровая электростанция в море">
 		<div class="main-text-center">
-			<h1 class="main-headline">ЧИСТАЯ, БЕЗОПАСНАЯ, ВОЗОБНАВЛЯЕМАЯ</h1>
+			<h1 class="wow bounceInLeft  main-headline">ЧИСТАЯ, БЕЗОПАСНАЯ, ВОЗОБНАВЛЯЕМАЯ</h1>
 		</div>
 	</div>
 	<div class="slide-contaner main-img-page" data-slider-number="2" style="display: none;">
 		<img src="images/index-slide-2.jpg" alt="Ветровая электростанция">
 		<div class="main-text-center">
-			<h1 class="main-headline">ПОЛУЧЕНИЕ ЭНЕРГИИ ВОКРУГ НАС</h1>
+			<h1 class="main-headline zoomIn">ПОЛУЧЕНИЕ ЭНЕРГИИ ВОКРУГ НАС</h1>
 		</div>
 	</div>
 	<div class="slide-contaner main-img-page" data-slider-number="3" style="display: none;">
 		<img src="images/index-slide-3.jpg" alt="Изображение Земли">
 		<div class="main-text-center">
 			
-			<h1 class="main-headline">ВМЕСТЕ МЫ СОХРАНИМ НАШ ДОМ</h1>
+			<h1 class="main-headline flipInX">ВМЕСТЕ МЫ СОХРАНИМ НАШ ДОМ</h1>
 			
 		</div>
 	</div>
@@ -206,7 +143,7 @@
 			<h5>
 				<a href="images/index-wind-section.jpg">Ветровая энергия</a>
 			</h5>
-			<figcaption>Крупнейшая в мире ветряная электростанция начала работу в Британии</figcaption>
+			<figcaption>Дания, как мировой лидер ветроэнергетики, и особенности установки ветряков</figcaption>
 		</figure>
 
 		<figure>
@@ -216,7 +153,7 @@
 			<h5>
 				<a href="images/index-solar-section.jpg">Солнечная энергия</a>
 			</h5>
-			<figcaption>Перспективность и доступность солнечной энергии в условиях постоянного роста цен .</figcaption>
+			<figcaption>Перспективность и доступность солнечной энергии в условиях постоянного роста цен</figcaption>
 		</figure>
 
 		<figure>
@@ -226,7 +163,7 @@
 			<h5>
 				<a href="images/index-hydro-section.jpg">Гидроэнергетика</a>
 			</h5>
-			<figcaption>Как работает гидроэлектростанция и какая стана абсолютный лидер по выработке гидроэнергии </figcaption>
+			<figcaption>Как работает гидроэлектростанция и некоторые факты из истории создания первых из них </figcaption>
 		</figure>
 
 	</section>
@@ -300,17 +237,19 @@
 		<div>
 			<h4>КОНТАКТЫ</h4>
 			<p>
-				<i class="fa fa-envelope-o" aria-hidden="true" class="footer-mail"> o.m.murashko@gmail.com</i>
+				<i class="fa fa-envelope-o" aria-hidden="true"> o.m.murashko@gmail.com</i>
 			</p>
 			<p>
-				<i class="fa fa-map-marker" aria-hidden="true" class="footer-adress"> г. Минск, Пл. 8 Марта, 20</i>
+				<i class="fa fa-map-marker" aria-hidden="true"> г. Минск, Пл. 8 Марта, 20</i>
 			</p>
 		</div>
+		<div>
 		<form class="mail" action="o.m.murashko@gmail.com">
 			<h4>НОВОСТНАЯ РАССЫЛКА</h4>
 			<input type="text" name="email" />
 			<input type="submit" name="podpisatsya" value="Подписаться" />
 		</form>
+	</div>
 	</footer>
 	
 </body>

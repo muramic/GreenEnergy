@@ -5,45 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="assets/materia-icons/materia-icons.css" rel="stylesheet">
-  <link link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.css">
   <script src="assets/jquery/jquery.min.js"></script>
   <script src="assets/jquery-parallax/parallax.min.js"></script>
-  <script>jQuery(window).trigger('resize').trigger('scroll');
-
-    $('.parallax-window').parallax({
-      naturalWidth: 600,
-      naturalHeight: 400
-    });
-    
-		$(document).ready(() => {
-			console.log('document is ready!')
-
-			function timer() {
-				setTimeout(() => {
-					$('[data-slider-button-type="next"]').click();
-					timer();
-				}, 10000);
-			}
-    });
-    
-		$(document).ready(function () {
-			var currentPageHeight = $('.main-img-page').height();
-
-			$(document).scroll(function ($event) {
-				if ($(document).scrollTop() > (currentPageHeight - 50)) {
-					$('header').removeClass('menu-background-when-no-scrolled');
-					$('header').addClass('menu-background-when-scrolled');
-				} else {
-					$('header').removeClass('menu-background-when-scrolled');
-					$('header').addClass('menu-background-when-no-scrolled');
-				}
-			})
-		});
-  </script>
-
+  <script type="text/javascript" src="menu.js"></script>
+  <script type="text/javascript" src="common.js"></script>
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -124,8 +94,8 @@
   <div class="main-img-page-container main-img-page">
     <img src="images/hydro4.jpg" alt="Изображение гидроэлектростанции">
     <div class="main-text-page-left">
-      <h1 class="main-headline">Гидроэнергетика</h1>
-      <p class="second-headline"> [ Основные направления ]</p>
+      <h1 class="main-headline black">Гидроэнергетика</h1>
+      <p class="second-headline black"> [ Использование природного ресурса на благо человечества ]</p>
     </div>
 
   </div>
@@ -137,41 +107,43 @@
   
         <div class="headline-text-left">
           <p>Коротко о главном</p>
-          <h1>Условия для
-            <span>солнечной энергии </span>
+          <h1>Устройство
+            <span>гидроэлектростанции </span>
           </h1>
         </div>
         <div class="box">
             <div class="diagram">
-                <img src="images/hydro-schema.svg.png" alt="Диаграмма использования солнечной энергии по странам">
+                <img src="images/hydro-schema.png" alt="Диаграмма использования солнечной энергии по странам">
               </div>
           <div class="container-text" >
+              <div class="box-text">
+                  <p>Гидроэлектростанции давно стали одним из символов промышленного прогресса. Их изображают на банкнотах и марках, посвящают им поэмы, а страны соревнуются в сооружении 
+                    все более и более мощных  «гидрогигантов». Однако несмотря на монументальность этих сооружений, принцип работ любой ГЭС довольно прост.</p>
+                </div>
               <div class="preim">
-                  <h4>Преимущества</h4>
+                  <h4>Принцип работы</h4>
                   <ul>
-                    <li>Перспективность, доступность и неисчерпаемость источника энергии в условиях постоянного роста цен на традиционные
-                      виды энергоносителей.
+                    <li>Вода под напором поступает на лопасти турбины гидроэлектростанции, которая в свою очередь приводит в действие 
+                      генераторы, вырабатывающие электричество. Мощность ГЭС зависит от напора и количества воды, проходящей через гидроагрегаты.
                     </li>
-                    <li>полная безопасность для окружающей среды</li>
+                    <li>При наиболее распространенном варианте строительства реку перегораживают плотиной,  которая поднимает уровень воды, 
+                      создавая необходимый напор. Причем его величина напрямую зависит от высоты сооружения.</li>
                   </ul>
-                  <h4>Недостатки</h4>
+                  <h4>Классификация</h4>
                   <ul>
-                    <li>Зависимость от погоды и времени суток[</li>
-                    <li>Сезонность в средних широтах и несовпадение периодов выработки энергии и потребности в энергии.</li>
-                    <li>Необходимость использования больших площадей</li>
-                    <li>Высокая стоимость конструкции, связанная с применением редких элементов</li>
+                    <li>плотинные ГЭС. Это наиболее распространённые виды гидроэлектрических станций. Напор воды в них создаётся посредством 
+                      установки плотины, полностью перегораживающей реку, или поднимающей уровень воды в ней на необходимую отметку. 
+                      Такие гидроэлектростанции строят на многоводных равнинных реках, а также на горных реках, в местах, где русло реки 
+                      более узкое, сжатое.</li>
+                    <li>приплотинные ГЭС. Строятся при более высоких напорах воды. В этом случае река полностью перегораживается плотиной, а само здание ГЭС располагается за плотиной, 
+                      в нижней её части. Вода, в этом случае, подводится к турбинам через специальные напорные тоннели, а не непосредственно, как в русловых ГЭС.</li>
+                    <li>деривационные ГЭС. Такие электростанции строят в тех местах, где велик уклон реки. Необходимая концентрация воды в ГЭС такого типа создаётся посредством деривации. Вода отводится из речного русла через специальные водоотводы</li>
+                   
                   </ul>
                 </div>
 
 
-            <div class="box-text">
-              <p>Поток солнечного излучения, проходящий через площадку в 1 м², расположенную перпендикулярно потоку излучения
-                на расстоянии одной астрономической единицы от центра Солнца (на входе в атмосферу Земли), равен 1367 Вт/м²
-                (солнечная постоянная). Из-за поглощения, при прохождении атмосферной массы Земли, максимальный поток солнечного
-                излучения на уровне моря (на Экваторе) — 1020 Вт/м². Однако следует учесть, что среднесуточное значение потока
-                солнечного излучения через единичную горизонтальную площадку как минимум в π раза меньше (из-за смены дня и
-                ночи и изменения угла солнца над горизонтом). Зимой в умеренных широтах это значение в два раза меньше.</p>
-            </div>
+            
   
             
           </div>
@@ -277,17 +249,19 @@
     <div>
       <h4>КОНТАКТЫ</h4>
       <p>
-        <i class="fa fa-envelope-o" aria-hidden="true" class="footer-mail"> o.m.murashko@gmail.com</i>
+        <i class="fa fa-envelope-o" aria-hidden="true"> o.m.murashko@gmail.com</i>
       </p>
       <p>
-        <i class="fa fa-map-marker" aria-hidden="true" class="footer-adress"> г. Минск, Пл. 8 Марта, 20</i>
+        <i class="fa fa-map-marker" aria-hidden="true"> г. Минск, Пл. 8 Марта, 20</i>
       </p>
     </div>
+    <div>
     <form class="mail" action="o.m.murashko@gmail.com">
       <h4>НОВОСТНАЯ РАССЫЛКА</h4>
       <input type="text" name="email" />
       <input type="submit" name="podpisatsya" value="Подписаться" />
     </form>
+  </div>
   </footer>
 
 </body>
